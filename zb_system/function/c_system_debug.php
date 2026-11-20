@@ -675,6 +675,11 @@ class ZbpErrorControl
 
     /**
      * 解析错误信息.
+     *
+     * @param mixed $type
+     * @param mixed $message
+     * @param mixed $file
+     * @param mixed $line
      */
     public function ParseError($type, $message, $file, $line)
     {
@@ -687,6 +692,8 @@ class ZbpErrorControl
 
     /**
      * 解析错误信息.
+     *
+     * @param mixed $error
      */
     public function ParseFatal($error)
     {
@@ -750,6 +757,9 @@ class ZbpErrorControl
 
     /**
      * 获取出错代码信息.
+     *
+     * @param mixed $file
+     * @param mixed $line
      *
      * @return array
      */

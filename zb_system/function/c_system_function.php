@@ -416,6 +416,11 @@ function GetList($count = 10, $cate = null, $auth = null, $date = null, $tags = 
  *
  * @api Filter_Plugin_Debug_Handler_ZEE
  *
+ * @param mixed      $errorCode
+ * @param null|mixed $errorDescription
+ * @param null|mixed $file
+ * @param null|mixed $line
+ *
  * @throws Exception
  */
 function Include_ShowError404($errorCode, $errorDescription = null, $file = null, $line = null)
@@ -659,6 +664,8 @@ function Include_ViewListPost_CheckRights_View($route)
 
 /**
  * 过滤扩展数据.
+ *
+ * @param mixed $object
  */
 function FilterMeta(&$object)
 {
@@ -680,6 +687,8 @@ function FilterMeta(&$object)
 
 /**
  * 过滤评论数据.
+ *
+ * @param mixed $comment
  *
  * @throws Exception
  */
@@ -714,6 +723,8 @@ function FilterComment(&$comment)
 
 /**
  * 过滤文章数据.
+ *
+ * @param mixed $article
  */
 function FilterPost(&$article)
 {
@@ -745,6 +756,8 @@ function FilterPost(&$article)
 
 /**
  * 过滤用户数据.
+ *
+ * @param mixed $member
  *
  * @throws Exception
  */
@@ -791,6 +804,8 @@ function FilterMember(&$member)
 
 /**
  * 过滤模块数据.
+ *
+ * @param mixed $module
  */
 function FilterModule(&$module)
 {
@@ -801,6 +816,8 @@ function FilterModule(&$module)
 
 /**
  * 过滤分类数据.
+ *
+ * @param mixed $category
  */
 function FilterCategory(&$category)
 {
@@ -817,6 +834,8 @@ function FilterCategory(&$category)
 
 /**
  * 过滤tag数据.
+ *
+ * @param mixed $tag
  */
 function FilterTag(&$tag)
 {
@@ -1079,7 +1098,8 @@ function CountTagArrayString($string, $plus = null, $articleid = null)
 /**
  * 统计用户下的文章数、页面数、评论数、附件数等.
  *
- * @param array $plus 设置是否需要完全全表扫描
+ * @param array $plus   设置是否需要完全全表扫描
+ * @param mixed $member
  */
 function CountMember(&$member, $plus = [null, null, null, null])
 {
